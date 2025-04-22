@@ -27,7 +27,7 @@ Esta é uma solução para o desafio de Calculadora de Pagamento de Hipoteca do 
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/calculadora-hipoteca.git
+   git clone https://github.com/Morpheusmmt/calculadora-hipoteca.git
    ```
 
 2. Navegue até o diretório do projeto:
@@ -65,12 +65,6 @@ Melhorias planejadas para implementações futuras:
 - Desenvolver uma opção para comparar diferentes cenários de empréstimo
 - Integrar opções para cálculo de seguros e impostos
 - Adicionar funcionalidade para salvar ou compartilhar resultados
-
-## Autor
-
-- Website - [Seu nome](https://www.seu-site.com)
-- Frontend Mentor - [@seu-usuario](https://www.frontendmentor.io/profile/seu-usuario)
-- LinkedIn - [Seu perfil](https://www.linkedin.com/in/seu-perfil/)
 
 ## Licença
 
