@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Hipoteca</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <div class="form-section">
+                <div class="header">
+                    <h1>Calculadora de Hipoteca</h1>
+                    <button class="clear-button">Limpar Tudo</button>
+                </div>
+                
+                <form id="mortgageForm">
+                    <div class="form-group">
+                        <label for="mortgageAmount">Valor da Hipoteca</label>
+                        <div class="input-wrapper">
+                            <div class="currency-box">R$</div>
+                            <input type="text" id="mortgageAmount" name="mortgageAmount" placeholder="300000" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="mortgageTerm">Prazo da Hipoteca</label>
+                            <div class="input-group">
+                                <input type="number" id="mortgageTerm" name="mortgageTerm" value="25" min="1" max="40" required>
+                                <div class="unit-box">anos</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group half">
+                            <label for="interestRate">Taxa de Juros</label>
+                            <div class="input-group">
+                                <input type="number" id="interestRate" name="interestRate" value="5.25" step="0.01" min="0.1" max="20" required>
+                                <div class="unit-box">%</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tipo de Hipoteca</label>
+                        <div class="radio-options">
+                            <label class="radio-option selected">
+                                <input type="radio" name="mortgageType" value="repayment" checked>
+                                <span class="radio-circle"></span>
+                                <span class="radio-label">Amortização</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="mortgageType" value="interestOnly">
+                                <span class="radio-circle"></span>
+                                <span class="radio-label">Somente Juros</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="calculate-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="2" width="16" height="20" rx="2" />
+                            <line x1="8" y1="6" x2="16" y2="6" />
+                            <line x1="8" y1="10" x2="16" y2="10" />
+                            <line x1="8" y1="14" x2="16" y2="14" />
+                            <line x1="8" y1="18" x2="16" y2="18" />
+                        </svg>
+                        Calcular Pagamentos
+                    </button>
+                </form>
+            </div>
+            
+            <div class="results-section" id="results">
+                <div class="results-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M21 15a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2" />
+                        <path d="M17 8h.01" />
+                        <rect x="3" y="4" width="18" height="16" rx="2" />
+                        <circle cx="9" cy="10" r="2" />
+                        <path d="m21 3-6 6" />
+                    </svg>
+                </div>
+                <h2>Resultados exibidos aqui</h2>
+                <p>Preencha o formulário e clique em "calcular pagamentos" para ver qual seria o valor da sua prestação mensal.</p>
+                
+                <div class="results-details hidden" id="resultDetails">
+                    <div class="result-item">
+                        <span class="result-label">Pagamento Mensal:</span>
+                        <span class="result-value" id="monthlyPayment">R$ 0,00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Total de Juros:</span>
+                        <span class="result-value" id="totalInterest">R$ 0,00</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Custo Total:</span>
+                        <span class="result-value" id="totalCost">R$ 0,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
